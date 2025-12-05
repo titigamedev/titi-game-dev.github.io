@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TGD · Titi Game Dev — Assets & Demos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="TGD (Titi Game Dev) — Unity assets showcase, demos and contact.">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="assets/img/logo.png" alt="TGD logo" class="logo" />
+      <div>
+        <h1> TGD <span class="studio">· titi-game-dev</span></h1>
+        <p class="tagline">Unity assets & tools — UGUI-focused utilities</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#youtube">YouTube</a>
+      <a href="#assets">My Assets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Small. Clean. Focused on UGUI.</h2>
+      <p class="lead">Automatic input device detection (gamepad ↔ mouse & keyboard) for Unity UGUI — simple to install, easy to integrate.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#assets">See my asset</a>
+        <a class="btn outline" href="#contact">Contact me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section id="youtube" class="section">
+    <div class="container grid-two">
+      <div>
+        <h3>Follow on YouTube</h3>
+        <p>I post short demos and setup walkthroughs on the channel. Subscribe for updates and tutorials.</p>
+        <a class="btn youtube" href="https://youtube.com/@titi-game-dev?sub_confirmation=1" target="_blank" rel="noopener">
+          <img src="assets/img/youtube-icon.png" alt="YouTube" class="icon"> Visit Titi Game Dev
+        </a>
+      </div>
+      <div class="video-placeholder">
+        <!-- Replace by an embedded video iframe if you want -->
+        <img src="assets/img/asset-placeholder.png" alt="Demo screenshot" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Assets -->
+  <section id="assets" class="section alt">
+    <div class="container">
+      <h3>My Assets</h3>
+      <p>One curated Unity asset for now — built to be lightweight and production-ready.</p>
+
+      <div class="assets-grid">
+        <!-- Asset card: duplicate for each asset -->
+        <article class="asset-card">
+          <img class="asset-screenshot" src="assets/img/asset-placeholder.png" alt="Asset screenshot">
+          <div class="asset-body">
+            <h4>ASSET_NAME_HERE</h4>
+            <p class="asset-desc">Automatic Input Device Switcher for UGUI — handles gamepad vs mouse/keyboard, hides/shows cursor, and selects default UI element automatically.</p>
+            <div class="asset-actions">
+              <a class="btn" target="_blank" rel="noopener" href="ASSET_STORE_LINK_HERE">View on Unity Asset Store</a>
+              <a class="btn outline" href="#contact">Contact author</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container grid-two">
+      <div>
+        <h3>Contact</h3>
+        <p>If you have questions, need support, or want custom work, get in touch.</p>
+        <p class="contact-line">
+          <img class="icon-sm" src="assets/img/email-icon.png" alt="email"> 
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+        </p>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>Links</p>
+        <ul class="links">
+          <li><a href="https://youtube.com/@titi-game-dev?sub_confirmation=1" target="_blank">YouTube Channel</a></li>
+          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> TGD · titi-game-dev</div>
+      <div class="footer-links">
+        <a href="#assets">Assets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
