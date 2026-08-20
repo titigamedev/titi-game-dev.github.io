@@ -3,8 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TGD · Titi Game Dev</title>
-  <meta name="description" content="TGD (Titi Game Dev) — Unity assets, YouTube, projets et contact.">
+  
+  <!-- ─── SEO DE BASE ────────────────────────────────────────────── -->
+  <title>Titi Game Dev (TGD) · Assets Unity & Application Fandex Android</title>
+  <meta name="description" content="Titi Game Dev (TGD) — Développeur indépendant. Assets Unity optimisés (Input Device Manager, Infinite Tunnel Generator) et l'application Pokédex Fandex sur Android.">
+  <meta name="keywords" content="Titi Game Dev, TGD, Unity, Unity Asset Store, Fandex, Pokedex, Application Android, Game Dev, C#, Input Device Auto-Switcher, Infinite Tunnel Generator">
+  <meta name="author" content="Titi Game Dev">
+  <link rel="canonical" href="https://titigamedev.github.io/">
+  <meta name="theme-color" content="#080b12">
+
+  <!-- ─── OPEN GRAPH (Facebook, Discord, LinkedIn, WhatsApp) ─────── -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://titigamedev.github.io/">
+  <meta property="og:title" content="Titi Game Dev (TGD) · Assets Unity & Applications Android">
+  <meta property="og:description" content="Découvrez mes outils Unity légers (Input Manager, Tunnel Generator) et mon application Android Fandex.">
+  <meta property="og:image" content="https://titigamedev.github.io/assets/img/Screenshot_2026-03-17-21-41-46-805_com.titigamedev.FanDex.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Titi Game Dev">
+
+  <!-- ─── TWITTER CARDS ──────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Titi Game Dev · Assets Unity & Application Fandex">
+  <meta name="twitter:description" content="Découvrez mes outils Unity légers et mon application Android Fandex sur le Google Play Store.">
+  <meta name="twitter:image" content="https://titigamedev.github.io/assets/img/Screenshot_2026-03-17-21-41-46-805_com.titigamedev.FanDex.jpg">
+
+  <!-- ─── DONNÉES STRUCTURÉES (Schema.org / JSON-LD) ─────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Titi Game Dev",
+    "alternateName": "TGD",
+    "url": "https://titigamedev.github.io/",
+    "sameAs": [
+      "https://youtube.com/@titi-game-dev",
+      "https://github.com/titigamedev"
+    ],
+    "jobTitle": "Game Developer & Android Application Developer",
+    "knowsAbout": ["Unity Engine", "Android", "C#", "Software Development", "Fandex"]
+  }
+  </script>
+
+  <!-- ─── POLICES ET STYLES ──────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -120,7 +160,6 @@
     .logo {
       width: 36px; height: 36px;
       object-fit: contain;
-      /* fallback if no image */
       background: var(--accent);
       border-radius: 6px;
       padding: 4px;
@@ -177,7 +216,7 @@
       color: var(--accent);
       margin-bottom: 20px;
     }
-    .hero h2 {
+    .hero h1 {
       font-family: var(--font-hd);
       font-size: clamp(2rem, 6vw, 3.6rem);
       font-weight: 900;
@@ -186,7 +225,7 @@
       color: #fff;
       margin-bottom: 24px;
     }
-    .hero h2 em {
+    .hero h1 em {
       font-style: normal;
       color: var(--accent);
     }
@@ -231,12 +270,12 @@
       border-color: var(--accent);
       color: var(--accent);
     }
-    .btn-blue {
+    .btn-blue, .btn-android {
       background: transparent;
       color: var(--accent2);
       border-color: var(--accent2);
     }
-    .btn-blue:hover {
+    .btn-blue:hover, .btn-android:hover {
       background: rgba(59,130,246,.12);
       box-shadow: var(--glow2);
     }
@@ -287,17 +326,6 @@
       background: var(--surface);
       display: flex; align-items: center; justify-content: center;
     }
-    .asset-img-placeholder {
-      width: 100%; aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #0e1728, #131e36);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-mono);
-      font-size: .7rem;
-      color: var(--muted);
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--border);
-    }
     .asset-body { padding: 22px 22px 24px; }
     .asset-tag {
       display: inline-block;
@@ -325,7 +353,7 @@
       margin-bottom: 20px;
       line-height: 1.6;
     }
-    .asset-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .asset-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
     /* ─── YOUTUBE ───────────────────────────────────────────────── */
     .yt-hero {
@@ -341,7 +369,6 @@
     }
     .yt-icon svg { width: 24px; fill: #fff; }
 
-    /* Accordion for videos */
     .video-list { display: flex; flex-direction: column; gap: 10px; }
 
     .video-item {
@@ -366,15 +393,6 @@
       color: var(--text);
     }
     .video-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-    .video-thumb-wrap {
-      flex-shrink: 0;
-      width: 80px; height: 45px;
-      border-radius: 6px;
-      overflow: hidden;
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-    .video-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; }
     .video-thumb-placeholder {
       width: 80px; height: 45px;
       background: linear-gradient(135deg, #1a0000, #2a0000);
@@ -597,8 +615,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="#">
-      <img src="assets/img/logo-resize.png" alt="TGD logo" class="logo"
-           onerror="this.style.display='none'">
+      <img src="assets/img/logo-resize.png" alt="Logo Titi Game Dev TGD" class="logo" onerror="this.style.display='none'">
       <div>
         <div class="brand-name">TGD</div>
         <div class="brand-sub">titi-game-dev</div>
@@ -606,6 +623,7 @@
     </a>
     <nav class="main-nav">
       <a href="#assets">Assets</a>
+      <a href="#android">Applications</a>
       <a href="#youtube">YouTube</a>
       <a href="#projects">Projets</a>
       <a href="#contact">Contact</a>
@@ -618,16 +636,15 @@
   <!-- ═══ HERO ════════════════════════════════════════════════════ -->
   <section class="hero">
     <div class="container">
-      <p class="hero-eyebrow">// Unity · Game Dev · Android App//</p>
-      <h2>Small tools.<br>Clean code.<br><em>Real impact.</em></h2>
+      <p class="hero-eyebrow">// Unity · Game Dev · Android App //</p>
+      <h1>Small tools.<br>Clean code.<br><em>Real impact.</em></h1>
       <p class="hero-lead">
-        Développeur de jeux vidéo et d'applications Android sur mon temps libre.
-        Je crée sous Unity avec une priorité constante : du code propre, léger et directement utilisable.
-        Chaque asset en vente est né d'un besoin réel dans mes projets et y est encore utilisé aujourd'hui.
+        Développeur indépendant de jeux vidéo et d'applications Android.
+        Je conçois sous Unity des outils légers, réutilisables et directement prêts pour la production, ainsi que des applications mobiles publiées sur le Google Play Store comme <strong>Fandex</strong>.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#assets">Voir mes assets</a>
-        <a class="btn btn-outline" href="#contact">Me contacter</a>
+        <a class="btn btn-primary" href="#android">Applications</a>
+        <a class="btn btn-outline" href="#assets">Assets Unity</a>
       </div>
     </div>
   </section>
@@ -638,20 +655,19 @@
   <section id="assets">
     <div class="container">
       <p class="section-tag">Unity Asset Store</p>
-      <h2 class="section-title">Mes Assets</h2>
+      <h2 class="section-title">Mes Assets Unity</h2>
       <p class="section-sub">
-        Des outils ciblés, sans fioriture — conçus pour s'intégrer proprement
-        dans n'importe quel projet Unity.
+        Des outils C# ciblés et optimisés, conçus pour s'intégrer proprement dans n'importe quel projet Unity.
       </p>
 
       <div class="assets-grid">
 
         <!-- ── Card 1 : Input Device Auto-Switcher ── -->
         <article class="asset-card reveal">
-         <img class="asset-img" src="assets/img/card_redim.png" alt="Screenshot de l'asset">
+          <img class="asset-img" src="assets/img/card_redim.png" alt="Aperçu de l'asset Unity Input Device Auto-Switcher">
           <div class="asset-body">
-            <span class="asset-tag">UGUI</span>
-            <div class="asset-title">Input Device Auto-Switcher</div>
+            <span class="asset-tag">UGUI Tool</span>
+            <h3 class="asset-title">Input Device Auto-Switcher</h3>
             <p class="asset-desc">
               Détection automatique manette ↔ souris/clavier pour Unity UGUI —
               masque/affiche le curseur, sélectionne l'élément UI par défaut.
@@ -669,12 +685,12 @@
 
         <!-- ── Card 2 : Infinite Tunnel Generator ── -->
         <article class="asset-card reveal">
-         <img class="asset-img" src="assets/img/ITG_card.png" alt="Screenshot de l'asset">
+          <img class="asset-img" src="assets/img/ITG_card.png" alt="Aperçu de l'asset Infinite Tunnel Generator pour Unity">
           <div class="asset-body">
-            <span class="asset-tag">Tool - Level Design</span>
-            <div class="asset-title">Infinite Tunnel Generator</div>
+            <span class="asset-tag">Level Design</span>
+            <h3 class="asset-title">Infinite Tunnel Generator</h3>
             <p class="asset-desc">
-              Génération de tunnel infini procédural avec gestion de la transparence dans la profondeur du rendu. 
+              Génération de tunnel infini procédural avec gestion de la transparence dans la profondeur du rendu.
             </p>
             <div class="asset-actions">
               <a class="btn btn-primary" href="https://assetstore.unity.com/packages/tools/level-design/infinite-tunnel-generator-361428" target="_blank" rel="noopener">
@@ -686,52 +702,40 @@
           </div>
         </article>
 
-
-        <!-- ── Duplicate this card per new asset ── -->
-
       </div>
     </div>
   </section>
 
   <hr class="section-divider">
 
-    <!-- ═══ APPLICATIONS ANDROID ═════════════════════════════════════ -->
+  <!-- ═══ APPLICATIONS ANDROID ═════════════════════════════════════ -->
   <section id="android">
     <div class="container">
       <p class="section-tag">Google Play Store</p>
-      <h2 class="section-title">Mes Applications</h2>
+      <h2 class="section-title">Mes Applications Android</h2>
       <p class="section-sub">
-        Applications Android développées sous Unity — disponibles sur le Play Store.
+        Applications mobiles développées pour Android — disponibles en téléchargement direct sur le Play Store.
       </p>
 
       <div class="assets-grid">
 
-        <!--
-          POUR AJOUTER UNE APPLICATION :
-          1. Remplacez NOM_APP, DESCRIPTION_APP et LIEN_PLAY_STORE
-          2. Remplacez [ screenshot ] par <img class="asset-img" src="assets/img/VOTRE_IMAGE.png" alt="...">
-          3. Dupliquez ce bloc article pour chaque application supplémentaire
-        -->
         <article class="asset-card android-card reveal">
-          <img class="asset-img" src="assets/img/Screenshot_2026-03-17-21-41-46-805_com.titigamedev.FanDex.jpg" alt="Screenshot de l'application">
+          <img class="asset-img" src="assets/img/Screenshot_2026-03-17-21-41-46-805_com.titigamedev.FanDex.jpg" alt="Capture d'écran de l'application Android Fandex">
           <div class="asset-body">
             <span class="asset-tag android-tag">Android</span>
-            <div class="asset-title">Fandex</div>
+            <h3 class="asset-title">Fandex</h3>
             <p class="asset-desc">
-              Pokédex pokemon simple et intuitif. Il liste tous les pokemons existants, leurs caractéristiques et les jeux dans lesquels ils sont disponibles. 
-              Utilisez les filtres pour retrouver vos pokémons préférés.
+              Pokédex Pokémon simple, intuitif et ultra-rapide. Il liste tous les Pokémon existants, leurs statistiques, leurs types et les jeux dans lesquels ils apparaissent. Filtrez facilement vos recherches.
             </p>
             <div class="asset-actions">
               <a class="btn btn-android" href="https://play.google.com/store/apps/details?id=com.titigamedev.FanDex" target="_blank" rel="noopener">
                 <svg width="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-7.27-2.83-2.83L3.18 23.76zm16.44-10.93L16.8 11l-2.97 2.97 2.97 2.97 2.86-1.65c.82-.47.82-1.79-.04-2.46zM3 .24c-.06.14-.1.3-.1.47v22.58c0 .17.04.33.1.47l.07.07L15.75 11 3.07.17 3 .24zm10.04 10.76L3 .24l10.04 10.76z"/></svg>
-                Play Store
+                Google Play
               </a>
               <a class="btn btn-outline" href="#contact">Contact</a>
             </div>
           </div>
         </article>
-
-        <!-- Dupliquez ce bloc pour chaque application supplémentaire -->
 
       </div>
     </div>
@@ -745,7 +749,7 @@
       <p class="section-tag">Chaîne YouTube</p>
       <h2 class="section-title">Vidéos & Démos</h2>
       <p class="section-sub">
-        Démos rapides, setup walkthroughs et tutoriels sur mes assets.
+        Démos rapides, setup walkthroughs et devlogs sur mes projets et assets.
       </p>
 
       <div class="yt-hero reveal">
@@ -754,7 +758,7 @@
         </div>
         <div>
           <strong style="font-size:1rem; color:#fff;">Titi Game Dev</strong><br>
-          <span style="color:var(--muted); font-size:.88rem;">Abonnez-vous pour suivre l'avancement de mes assets et projets.</span>
+          <span style="color:var(--muted); font-size:.88rem;">Abonnez-vous pour suivre l'avancement de mes projets.</span>
         </div>
         <a class="btn btn-yt" href="https://youtube.com/@titi-game-dev?sub_confirmation=1" target="_blank" rel="noopener" style="margin-left:auto; flex-shrink:0;">
           <svg width="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -762,15 +766,7 @@
         </a>
       </div>
 
-      <!-- Liste dépliante de vidéos -->
       <div class="video-list">
-
-        <!--
-          POUR AJOUTER UNE VIDÉO :
-          1. Remplacez VIDEO_ID par l'identifiant YouTube (ex: dQw4w9WgXcQ)
-          2. Remplacez le titre, la date et la description
-          3. Pour la miniature automatique : src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg"
-        -->
 
         <div class="video-item reveal">
           <button class="video-toggle" aria-expanded="false">
@@ -785,10 +781,9 @@
           </button>
           <div class="video-body">
             <div class="video-iframe-wrap">
-              <!-- Remplacez VIDEO_ID ici -->
-              <iframe src="https://www.youtube.com/embed/9dtdyJt2wNQ" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube.com/embed/9dtdyJt2wNQ" title="Demo Unity Input Device Manager" allowfullscreen loading="lazy"></iframe>
             </div>
-            <p class="video-description">Demo input device manager</p>
+            <p class="video-description">Démo complète de l'Input Device Manager sous Unity 6.</p>
             <a class="btn btn-yt" href="https://youtu.be/9dtdyJt2wNQ" target="_blank" rel="noopener" style="font-size:.75rem; padding:8px 16px;">
               Voir sur YouTube
             </a>
@@ -808,17 +803,14 @@
           </button>
           <div class="video-body">
             <div class="video-iframe-wrap">
-              <!-- Remplacez VIDEO_ID ici -->
-              <iframe src="https://www.youtube.com/embed/c5KXSp7smzk" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube.com/embed/c5KXSp7smzk" title="Demo Unity Procedural Tunnel Generator" allowfullscreen loading="lazy"></iframe>
             </div>
-            <p class="video-description">Demo Procedural tunnel generator</p>
+            <p class="video-description">Démo du générateur de tunnel procédural sous Unity 6.</p>
             <a class="btn btn-yt" href="https://youtu.be/c5KXSp7smzk" target="_blank" rel="noopener" style="font-size:.75rem; padding:8px 16px;">
               Voir sur YouTube
             </a>
           </div>
         </div>
-
-        <!-- Dupliquez le bloc .video-item ci-dessus pour chaque vidéo supplémentaire -->
 
       </div>
     </div>
@@ -832,7 +824,7 @@
       <p class="section-tag">En développement</p>
       <h2 class="section-title">Projets en cours</h2>
       <p class="section-sub">
-        Ce sur quoi je travaille en ce moment — assets et outils à venir.
+        Ce sur quoi je travaille en ce moment — nouveaux jeux, outils et applications.
       </p>
 
       <div class="projects-grid">
@@ -841,13 +833,14 @@
           <div class="project-status wip">
             <span class="status-dot"></span> En cours
           </div>
-          <div class="project-title">PROJET_1_ICI</div>
+          <h3 class="project-title">Module de Localisation Unity</h3>
           <p class="project-desc">
-            Description du projet en cours — fonctionnalité principale, état d'avancement.
+            Système léger C#/JSON/CSV de localisation multi-langues sans surcharge de mémoire pour projets Unity.
           </p>
           <div class="project-tags">
             <span class="tag">Unity</span>
-            <span class="tag">UGUI</span>
+            <span class="tag">C#</span>
+            <span class="tag">JSON/CSV</span>
           </div>
         </div>
 
@@ -855,17 +848,15 @@
           <div class="project-status plan">
             <span class="status-dot"></span> Planifié
           </div>
-          <div class="project-title">PROJET_2_ICI</div>
+          <h3 class="project-title">Space Shooter 3D</h3>
           <p class="project-desc">
-            Description d'un projet à venir — idée, périmètre envisagé.
+            Projet de jeu d'action spatial sous Unity 6 avec doublage français et sous-titres traduits.
           </p>
           <div class="project-tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
+            <span class="tag">Unity 6</span>
+            <span class="tag">PC / Steam</span>
           </div>
         </div>
-
-        <!-- Dupliquez .project-card pour chaque projet supplémentaire -->
 
       </div>
     </div>
@@ -876,10 +867,10 @@
   <!-- ═══ CONTACT ══════════════════════════════════════════════════ -->
   <section id="contact">
     <div class="container">
-      <p class="section-tag">Contact</p>
+      <p class="section-tag">Contact & Support</p>
       <h2 class="section-title">Me joindre</h2>
       <p class="section-sub">
-        Questions, support ou travail sur mesure — je lis mes mails.
+        Questions sur les assets, support de l'application Fandex ou demande de contact professionnel.
       </p>
 
       <div class="contact-card reveal">
@@ -894,7 +885,7 @@
             <svg width="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             YouTube
           </a>
-          <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">
+          <a class="btn btn-outline" href="https://github.com/titigamedev" target="_blank" rel="noopener">
             <svg width="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             GitHub
           </a>
@@ -909,9 +900,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-copy">© <span id="year"></span> TGD · titi-game-dev</div>
+      <div class="footer-copy">© <span id="year"></span> TGD · Titi Game Dev</div>
       <div class="footer-links">
         <a href="#assets">Assets</a>
+        <a href="#android">Applications</a>
         <a href="#youtube">YouTube</a>
         <a href="#projects">Projets</a>
         <a href="#contact">Contact</a>
@@ -921,7 +913,7 @@
 </footer>
 
 <script>
-  // Year
+  // Dynamic Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // ── Accordion videos ──────────────────────────────────────────
